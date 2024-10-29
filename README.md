@@ -4,7 +4,7 @@ A small autograd engine inspired by [PyTorch Autograd Engine](https://pytorch.or
 
 This source code is commented to demonstrate deeper understanding of core concepts and for ease of future understanding. Further implementing and practicing backpropagation core concepts studied in [Neural Networks and Deep Learning by DeepLearning.AI and Andrew Ng](https://www.coursera.org/account/accomplishments/verify/ZJKF2ULGZVMS) 
 
-This project is used for educational purposes and follows the course [Neural Networks: Zero to Hero by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=1) [Example Source Code](https://github.com/karpathy/micrograd)
+This project is used for educational purposes and follows the course [Neural Networks: Zero to Hero by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=1).
 
 ## Installation
 test
