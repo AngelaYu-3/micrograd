@@ -7,9 +7,7 @@ This source code is commented to demonstrate deeper understanding of core concep
 This project is used for educational purposes and follows the course [Neural Networks: Zero to Hero by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=1) [Example Source Code](https://github.com/karpathy/micrograd)
 
 ## Installation
-
 ## Example usage
-
 ## License
 MIT
 
