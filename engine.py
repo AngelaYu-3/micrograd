@@ -1,13 +1,3 @@
-"""
-QUESTIONS:
-Q: Why are non-linear activation functions important, and how does using non linear activation functions allow
-for modeling of more complex patterns
-A: representive enough to approximate any function
-
-Q: When you get various derivatives of loss function with respect to weights (meaning knowing how loss changes as weights vary),
-how do you use those derivatives to update weights? (a += learning_rate * dL/da) Why do you add 'learning_rate * dL/da' to 'a'?
-A: 
-"""
 
 class Value:
 
