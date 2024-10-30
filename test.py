@@ -29,21 +29,21 @@ a = 2.0
 b = -3.0
 c = 10.0
 
-# derivatives with respect to h
+# derivative of d with respect to a (looking at how the function changes as variable varies)
 d1 = a*b + c
 a += h
 d2 = a* b + c
-print('da/dh: ', (d2 - d1) / h)
+print('dd/da: ', (d2 - d1) / h)
 
 d1 = a*b + c
 b += h
 d2 = a* b + c
-print('db/dh: ', (d2 - d1) / h)
+print('dd/db: ', (d2 - d1) / h)
 
 d1 = a*b + c
 c += h
 d2 = a* b + c
-print('dc/dh: ', (d2 - d1) / h)
+print('dd/dc: ', (d2 - d1) / h)
 
 
 
