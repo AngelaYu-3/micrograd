@@ -24,7 +24,6 @@ A: Refer to the diagram below--same concept applies in higher dimensions (more w
 [click here to see image](images/question2_diagram.pdf)
 
 
-"""
 ## License
 MIT
 
