@@ -20,6 +20,8 @@ A: Non-linear functions are representive enough to approximate any function (thi
 Q: When you get various derivatives of loss function with respect to weights (meaning knowing how loss changes as weights vary), how do you use those derivatives to update weights? (a += learning_rate * dL/da) Why do you add 'learning_rate * dL/da' to 'a'?
 A: Refer to the diagram below--same concept applies in higher dimensions (more weights)
 
+![Alt text](q2_diagram.png)
+
 
 """
 ## License
