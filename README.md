@@ -21,7 +21,7 @@ ___
 
 A: Refer to the diagram below--same concept applies in higher dimensions (more weights)
 
-![click here to download image](images/q2_diagram.jpg)
+[click here to see image](images/question2_diagram.pdf)
 
 
 """
