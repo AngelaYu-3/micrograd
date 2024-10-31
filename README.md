@@ -6,7 +6,7 @@ This project is for educational purposes and follows the course [Neural Networks
 
 ___
 
-***Source code is commented to demonstrate deep, independent understanding of core concepts as well as for ease of future read-throughs.***
+***Source code is commented to demonstrate deep, independent understanding of core concepts as well as for ease of future read-throughs. Questions included below are also demonstrations of own independent learnings.***
 
 ***Project allows for further applications of core concepts studied in [Neural Networks and Deep Learning by DeepLearning.AI and Andrew Ng](https://www.coursera.org/account/accomplishments/verify/ZJKF2ULGZVMS)***
 
