@@ -8,7 +8,7 @@ def f(x):
 
 x = 3.0
 # finding value at f(x)
-print(f(x))
+# print(f(x))
 
 # plotting f(x) from -5 to 5 with increments of 0.25
 xs = np.arange(-5, 5, 0.25)
@@ -18,7 +18,7 @@ plt.plot(xs, ys)
 
 # finding slope at f(x)
 h = 0.000000001
-print((f(x + h) - f(x)) / h)
+# print((f(x + h) - f(x)) / h)
 
 
 # more complex example
@@ -33,17 +33,23 @@ c = 10.0
 d1 = a*b + c
 a += h
 d2 = a* b + c
-print('dd/da: ', (d2 - d1) / h)
+# print('dd/da: ', (d2 - d1) / h)
 
 d1 = a*b + c
 b += h
 d2 = a* b + c
-print('dd/db: ', (d2 - d1) / h)
+# print('dd/db: ', (d2 - d1) / h)
 
 d1 = a*b + c
 c += h
 d2 = a* b + c
-print('dd/dc: ', (d2 - d1) / h)
+# print('dd/dc: ', (d2 - d1) / h)
+
+testlist = [1, 2, 3]
+# print(testlist)
+# print(reversed(testlist))
+for v in reversed(testlist):
+    print(v)
 
 
 

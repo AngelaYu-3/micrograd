@@ -1,6 +1,13 @@
 
 import math
 
+"""
+stores a single scalar value and 
+solves for its gradient through backward propagation 
+of an expression graph of mathematical operations 
+
+(addition, subtraction, multiplication, division, exponential)
+"""
 class Value:
 
     # data: a single scalar value 
@@ -19,28 +26,56 @@ class Value:
     
     # adding two Value objects
     def __add__(self, other):
+        other = other if isinstance(other, Value) else Value(other)
         out = Value(self.data + other.data, (self, other), '+')
         
         def backward():
             # for reasoning, think about chain rule going backwards for addition
-            self.grad = 1.0 * out.grad
-            other.grad = 1.0 * out.grad
-        out.backward = backward
+            # print('out_plus: ', out.grad)
+            self.grad += 1.0 * out.grad
+            other.grad += 1.0 * out.grad
+        out.backward = backward()
 
         return out
     
     # multiplying two Value objects
     def __mul__(self, other):
-        out = Value(self.data * other.data, (self, other), 'x')
+        other = other if isinstance(other, Value) else Value(other)
+        out = Value(self.data * other.data, (self, other), '*')
 
         def backward():
+
+            # print('out_mult: ', out.grad)
             # for reasoning, think about chain rule going backwards for addition
-            self.grad = other.data * out.grad
-            other.grad = self.data * out.grad
-        out.backward = backward
+            self.grad += other.data * out.grad
+            other.grad += self.data * out.grad
+            
+        out.backward = backward()
 
         return out
     
+    # calculates self ^ other, other is always an int or a float NOT a Value object
+    def __pow__(self, other):
+        assert isinstance(other, (int, float)), "only supporting int/float powers for now"
+        out = Value(self.data**other, (self, ), f'**{other}')
+
+        def backward():
+            self.grad += (other * self.data**(other - 1)) * out.grad
+        out.backward = backward()
+
+        return out
+    
+    # calculates e^Value
+    def pow(self):
+        x = self.data
+        out = Value(math.exp(x), (self, ), 'exp')
+
+        def backward():
+            self.grad += out.data * out.grad
+        out._backward = backward()
+
+        return out
+
     # tanh activation function
     def tanh(self):
         x = self.data
@@ -49,8 +84,8 @@ class Value:
 
         def backward():
             # used derivative of tanh
-            self.grad = (1 - t**2) * out.grad
-        out.backward = backward
+            self.grad += (1 - t**2) * out.grad
+        out.backward = backward()
             
         return out
     
@@ -62,8 +97,8 @@ class Value:
 
         def backward():
             # used derivative of relu
-            self.grad = self.grad + (out.data > 0) * out.grad
-        out.backward = backward
+            self.grad += self.grad + (out.data > 0) * out.grad
+        out.backward = backward()
 
         return out
     
@@ -77,18 +112,56 @@ class Value:
                 for child in v.prev:
                     build_topo(child)
                 topo.append(v)
+                #print(topo)
         build_topo(self)
 
         # go one variable at a time and apply the chain rule (backward function) to get the variable's gradient (back propagation on topological sorted graph)
         # need to set self.grad to 1 because loss changes by 1 when loss varies (dL/dL), L is the very last node
-        self.grad = 1.0
+        topo[len(topo) - 1].grad = 1.0
+        print(topo[len(topo) - 1])
+        print(topo[len(topo) - 1].data)
+        print(topo[len(topo) - 1].grad)
+        # print(reversed(topo))
         for v in reversed(topo):
-            v.backward()
+            # print(v.grad)
+            # print(type(v))
+            # print(type(v))
+            v.backward
+            # print(v.grad)
 
+
+    # negates self Value object
+    def __neg__(self):
+        return self * -1
+    
+    # if other + self is called where other is NOT a Value object
+    def __radd__(self, other):
+        return self + other
+    
+    # if self - other is called
+    def __sub__(self, other):
+        return self + (-other)
+    
+    # if other - self is called where other is NOT a Value object
+    def __rsub__(self, other):
+        return self + (-other)
+    
+    # if other * self is called where other is NOT a Value object
+    def __rmul__(self, other):
+        return self * other 
+
+    # calculates self / other
+    def __truediv__(self, other):
+        return self * other**-1
+    
+    # if other / self is called where other is NOT a Value object
+    def __rtruediv__(self, other):
+        return self * other**-1
+    
     # string representation of Value object
     def __repr__(self):
         return f"Value(data={self.data})"
-    
+
 
 
 
