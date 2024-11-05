@@ -17,8 +17,8 @@ xs = [
     [0.5, 1.0, 1.0],
     [1.0, 1.0, -1.0]
 ]
-# ground truth for testing data
-ys = [1.0, -1.0, -1.0, 1.0]                                        
+# ground truth for training data
+ys = [1.0, -1.0, -1.0, 1.0]  
     
 
 """
