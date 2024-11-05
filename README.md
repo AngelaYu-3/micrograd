@@ -4,15 +4,15 @@ A small autograd engine inspired by [PyTorch Autograd Engine](https://pytorch.or
 
 This project is for educational purposes and follows the course [Neural Networks: Zero to Hero by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=1). 
 
-___
 
 ***Source code is commented to demonstrate deep, independent understanding of core concepts as well as for ease of future read-throughs. Questions included below are also demonstrations of own independent learnings.***
 
 ***Project allows for further applications of core concepts studied in [Neural Networks and Deep Learning by DeepLearning.AI and Andrew Ng](https://www.coursera.org/account/accomplishments/verify/ZJKF2ULGZVMS)***
 
-
+___
 ## Example Usage: Building a Binary Classifier
 
+### simple binary classifier given small data set
 ```bash
 # TESTING
 # making a binary classifier neural network with 3 inputs and 3 layers of 4, 4, 1, neurons respectively
@@ -59,6 +59,13 @@ def binaryClassifier():
 binaryClassifier()
 ```
 
+### more complex binary classification given larger dataset
+source code is available under binaryClassifier.py and outputed data predictions are visualized in three examples below. Training data are the plotted points and binary classifier model classified those points accordingly into two separate sections. Trained with 100 iterations of gradient descent and with a batch size of 10.
+
+
+
+
+___
 ## Questions
 
 **Q: Why are non-linear activation functions important, and how does using non linear activation functions allow
