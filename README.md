@@ -10,6 +10,7 @@ ___
 
 ***Project allows for further applications of core concepts studied in [Neural Networks and Deep Learning by DeepLearning.AI and Andrew Ng](https://www.coursera.org/account/accomplishments/verify/ZJKF2ULGZVMS)***
 
+
 ## Example Usage: Building a Binary Classifier
 
 ```bash
