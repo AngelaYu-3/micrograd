@@ -62,6 +62,9 @@ binaryClassifier()
 ### more complex binary classification given larger dataset
 source code is available under binaryClassifier.py and outputed data predictions are visualized in three examples below. Training data are the plotted points and binary classifier model classified those points accordingly into two separate sections. Trained with 100 iterations of gradient descent and with a batch size of 10.
 
+<img src="images/data1.png" alt="data1" width="500"/>
+<img src="images/data2.png" alt="data2" width="500"/>
+<img src="images/data3.png" alt="data3" width="500"/>
 
 
 
