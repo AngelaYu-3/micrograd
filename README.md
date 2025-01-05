@@ -69,7 +69,7 @@ source code is available under binaryClassifier.py and outputed data predictions
 
 
 ___
-## Questions
+## Selected Questions
 
 **Q: Why are non-linear activation functions important, and how does using non linear activation functions allow
 for modeling of more complex patterns?**
