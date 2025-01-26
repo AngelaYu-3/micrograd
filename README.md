@@ -4,7 +4,7 @@ A small autograd engine inspired by [PyTorch Autograd Engine](https://pytorch.or
 
 This project is for educational purposes and follows the course [Neural Networks: Zero to Hero by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=1). 
 
-Note that training and thus outputs are significantly hampered by GPU inaccessability.
+Note that training and thus outputs are significantly hampered by GPU inaccessibility.
 
 ***Source code is commented to demonstrate independent understanding of core concepts as well as for ease of future read-throughs. Documentation below also demonstrates independent learnings.***
 
